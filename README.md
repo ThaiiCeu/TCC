@@ -1,31 +1,62 @@
-# Análise de Ciclos da Exportação de Café no Brasil
+# ☕ Análise de Ciclos da Exportação de Café no Brasil  
 
-Bem-vindo(a) ao repositório deste projeto de Trabalho de Conclusão de Curso (TCC), que tem como objetivo analisar os ciclos das exportações de café no Brasil através de modelos de decomposição de séries temporais e análise espectral econométrica.
-
----
-
-## O que foi realizado até o momento
-
-Nesta etapa inicial, utilizamos dados reais fornecidos pelo CECAFÉ, abrangendo os quatro tipos de café exportados (Conilon, Arábica, Torrado e Solúvel), com informações mensais sobre Volume, Receita e Preço Médio. Para desenvolver a análise, empregamos a linguagem **R** e diversos pacotes estatísticos, como:
-
-- **ggplot2** – Para a visualização gráfica dos dados (séries temporais, histogramas e boxplots);
-- **forecast** e **tseries** – Para modelagem e testes de estacionaridade (como o teste de Dickey-Fuller);
-- **lmtest** e **Metrics** – Para avaliação dos modelos, através de testes e métricas de desempenho.
-
-Foram ajustados modelos de regressão com variáveis dummy (para capturar a sazonalidade) e modelos harmônicos (usando a transformação de Fourier), que permitiram decompor as séries em seus componentes de tendência, sazonalidade e irregularidade. Os resultados parciais demonstraram que ambos os modelos conseguem captar, de forma satisfatória, os padrões e ciclos presentes nos dados de exportação do café.
+Bem-vindo(a) ao repositório do meu **Trabalho de Conclusão de Curso (TCC II)** em Estatística na FCT/Unesp.  
+O objetivo deste projeto foi **analisar os ciclos das exportações de café no Brasil** por meio de **modelos de decomposição de séries temporais e análise espectral econométrica**, com foco em compreender os padrões de **volume, receita e preço médio** dos quatro principais tipos de café exportados (Arábica, Conilon, Solúvel e Torrado).  
 
 ---
 
-## Próximos Passos
+## 📊 O que foi realizado  
 
-A próxima fase deste projeto visa aprofundar a **análise espectral**, com o intuito de identificar com maior precisão as frequências dominantes e os ciclos subjacentes nas séries temporais. Essa etapa será fundamental para aprimorar os modelos preditivos e oferecer insights mais profundos sobre o comportamento do mercado de café, contribuindo para uma melhor compreensão dos fatores históricos e econômicos que influenciam as exportações.
+- **Base de dados**: Relatórios mensais do **CECAFÉ** (2015–2022).  
+- **Variáveis analisadas**:  
+  - Volume exportado (sacas de 60 kg)  
+  - Receita (US$ 1000)  
+  - Preço médio (US$/saca)  
+- **Ferramentas utilizadas**:  
+  - Linguagem **R**  
+  - Pacotes:  
+    - `ggplot2` → visualização gráfica (séries, boxplots, histogramas)  
+    - `forecast`, `tseries` → testes de estacionaridade (Dickey-Fuller) e modelagem  
+    - `lmtest`, `Metrics` → avaliação de modelos (p-valores, R², métricas de desempenho)  
 
 ---
 
-## Conclusão
+## 🧩 Metodologia  
 
-Este repositório reúne os códigos e as análises realizadas até o momento, servindo como base para futuras implementações e refinamentos. Convidamos você a explorar o projeto, acompanhar as atualizações e contribuir com sugestões para o desenvolvimento contínuo desta pesquisa, que une rigor estatístico à aplicação prática em um dos setores mais importantes da economia brasileira.
+- Análise descritiva completa das séries (tendências, dispersão e sazonalidade)  
+- Ajuste de **12 modelos harmônicos iniciais** (com frequência de 12 meses)  
+- Verificação de resíduos com testes de **Shapiro-Wilk** (normalidade) e **Durbin-Watson** (autocorrelação)  
+- Correção da autocorrelação serial por meio da **transformação de Cochrane-Orcutt**  
+- Aplicação de **análise espectral** e **periodograma**, identificando frequências dominantes — especialmente **96 meses**  
+- Comparação dos modelos pelo coeficiente de determinação (R²) e interpretação dos padrões temporais  
 
 ---
 
-Obrigado por seu interesse! Fique à vontade para explorar, utilizar e colaborar com este trabalho.
+## ✅ Resultados principais  
+
+- O **Arábica** se destacou como o café mais exportado em volume e receita  
+- O **Solúvel** apresentou menor variabilidade relativa, mostrando estabilidade  
+- O **Conilon** registrou períodos de queda acentuada entre 2016–2018, capturados por variáveis dummy nos modelos  
+- O **Torrado** apresentou preços médios mais altos e maior variabilidade  
+- Os modelos harmônicos, refinados pelo uso do periodograma, conseguiram **captar com eficiência tendências e sazonalidades**  
+- Apesar de alguns desafios com resíduos não normais, os modelos finais mostraram-se adequados para explicar os ciclos  
+
+---
+
+## 🚀 Conclusão  
+
+As técnicas de **decomposição temporal e análise harmônica** mostraram-se essenciais para compreender a dinâmica das exportações brasileiras de café.  
+Os resultados reforçam a importância da Estatística aplicada à economia e ao agronegócio, oferecendo insights que podem apoiar a gestão estratégica da cadeia produtiva do café.  
+
+---
+
+## 🤝 Contribuição  
+
+Sugestões, críticas construtivas e colaborações são bem-vindas!  
+Este repositório é um espaço aberto para troca de ideias sobre **séries temporais, econometria e análise aplicada ao mercado de commodities**.  
+
+---
+
+📌 **Autoria**: Thaii Céu Santos  
+🎓 **Orientador**: Prof. Dr. Manoel Ivanildo Silvestre Bezerra  
+📍 Universidade Estadual Paulista (UNESP) – FCT/Presidente Prudente  
